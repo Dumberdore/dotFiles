@@ -37,6 +37,7 @@ HIST_STAMPS="mm/dd/yyyy"
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
 
 # Set fzf installation directory path
 export FZF_BASE=/usr/local/bin/fzf
@@ -69,3 +70,6 @@ source $HOME/.kbenv/kbenv.sh
 
 alias lc='colorls'
 
+
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash

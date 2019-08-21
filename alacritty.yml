@@ -37,7 +37,7 @@ window:
   #     - none: Neither borders nor title bar
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: transparent
 
   # When true, alacritty starts maximized.
   start_maximized: true
