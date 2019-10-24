@@ -1,20 +1,32 @@
-#Terminus Support
+#Terminal Support
 export TERM="xterm-256color"
-
-# if [ $TERM_PROGRAM == "Terminus-Sublime" ]; then
-#     bindkey "\e[1;3C" forward-word
-#     bindkey "\e[1;3D" backward-word
-# fi
-# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/p0d00kq/.oh-my-zsh"
+export UPDATE_ZSH_DAYS=13
 
+# PROMPT CUSTOMIZATIONS
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 P9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON="%F{232}\uE0BD%f"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\ufbdb "
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv status dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+HIST_STAMPS="mm/dd/yyyy"
+
+# Multi-line
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭%F{cyan}"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
+
+# Status
+POWERLEVEL9K_STATUS_OK_BACKGROUND='000'
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND="black"
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+POWERLEVEL9K_STATUS_VERBOSE=true
+POWERLEVEL9K_STATUS_CROSS=true
+
+# Dir
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='000'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='000'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='000'
@@ -23,19 +35,11 @@ POWERLEVEL9K_HOME_ICON=''
 POWERLEVEL9K_HOME_SUB_ICON=''
 POWERLEVEL9K_FOLDER_ICON=''
 POWERLEVEL9K_ETC_ICON=''
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv status dir)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-HIST_STAMPS="mm/dd/yyyy"
-
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
+# Tmux
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
 
@@ -73,3 +77,4 @@ alias lc='colorls'
 
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
