@@ -37,10 +37,10 @@ window:
   #     - none: Neither borders nor title bar
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: transparent
+  decorations: buttonless
 
   # When true, alacritty starts maximized.
-  start_maximized: true
+  startup_mode: Maximized
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -50,15 +50,6 @@ scrolling:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   multiplier: 3
-
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number of lines the terminal
-  # should scroll when the alternate screen buffer is active. This is used
-  # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
@@ -72,10 +63,10 @@ font:
     family: FuraCode Nerd Font Mono
     style: Regular
   bold:
-    family: FuraCode Nerd Font Mono
+    family: Fura Code Nerd Font Mono
     style: Bold
   italic:
-    family: FuraCode Nerd Font Mono
+    family: Fura Code Nerd Font Mono
     style: Italic
 
   # Point size
@@ -110,11 +101,6 @@ font:
   # effect.
   use_thin_strokes: true
 
-# Display the time it takes to redraw each frame.
-render_timer: false
-
-# Keep the log file after quitting Alacritty.
-persistent_logging: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true

@@ -9,7 +9,7 @@ export UPDATE_ZSH_DAYS=13
 # PROMPT CUSTOMIZATIONS
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
-P9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON="%F{232}\uE0BD%f"
+P9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON="%F{232}\uE0B0%f"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv status dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -72,7 +72,7 @@ alias find=gfind
 export PATH="$HOME/.bin:$PATH"
 source $HOME/.kbenv/kbenv.sh
 
-alias lc='colorls'
+alias ls='colorls'
 
 
 . /usr/local/opt/asdf/asdf.sh
