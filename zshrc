@@ -73,8 +73,9 @@ export PATH="$HOME/.bin:$PATH"
 source $HOME/.kbenv/kbenv.sh
 
 alias ls='colorls'
-
+alias sc='sledge connect'
 
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
