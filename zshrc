@@ -68,14 +68,19 @@ export slgpw=zqxsXy8Q89g/KLdF+qxYmA
 alias kctl=kubectl
 alias helm=helm --tls
 alias find=gfind
+alias subnew=subl -n .
+alias subadd=subl -a .
 
 export PATH="$HOME/.bin:$PATH"
 source $HOME/.kbenv/kbenv.sh
 
-alias ls='colorls'
+alias ls='exa --icons'
 alias sc='sledge connect'
 
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+
