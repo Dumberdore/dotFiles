@@ -49,33 +49,33 @@
       # =========================[ Line #1 ]=========================
       command_execution_time  # duration of the last command
       vcs                     # git status
-      background_jobs         # presence of background jobs
-      virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-      anaconda                # conda environment (https://conda.io/)
+      # background_jobs         # presence of background jobs
+      # virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
+      # anaconda                # conda environment (https://conda.io/)
       pyenv                   # python environment (https://github.com/pyenv/pyenv)
-      nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
-      nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
-      nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
+      # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
+      # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
+      # nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
       # node_version          # node.js version
       # go_version            # go version (https://golang.org)
       # rust_version          # rustc version (https://www.rust-lang.org)
       # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-      rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
-      rvm                     # ruby version from rvm (https://rvm.io)
+      # rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
+      # rvm                     # ruby version from rvm (https://rvm.io)
       # kubecontext             # current kubernetes context (https://kubernetes.io/)
       terraform               # terraform workspace (https://www.terraform.io)
       aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
       # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
       # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
-      context                 # user@hostname
-      nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-      ranger                  # ranger shell (https://github.com/ranger/ranger)
+      # context                 # user@hostname
+      # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
+      # ranger                  # ranger shell (https://github.com/ranger/ranger)
       # vpn_ip                # virtual private network indicator
       # ram                   # free RAM
       # load                  # CPU load
       # time                  # current time
       # =========================[ Line #2 ]=========================
-      newline
+      # newline
       # public_ip             # public IP address
       # proxy                 # system-wide http/https/ftp proxy
       # battery               # internal battery
@@ -151,9 +151,9 @@
   typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX='%238F├─'
   typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%238F╰─'
   # Connect right prompt lines with these symbols.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX='%238F─╮'
-  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX='%238F─┤'
-  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX='%238F─╯'
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX=''
+  typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX=''
+  typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX=''
 
   # Filler between left and right prompt on the first prompt line. You can set it to ' ', '·' or
   # '─'. The last two make it easier to see the alignment between left and right prompt and to
