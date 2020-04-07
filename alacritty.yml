@@ -60,13 +60,13 @@ tabspaces: 2
 # Font configuration (changes require restart)
 font:
   normal:
-    family: FuraCode Nerd Font Mono
+    family: FuraCode Nerd Font
     style: Regular
   bold:
-    family: Fura Code Nerd Font Mono
+    family: Fura Code Nerd Font
     style: Bold
   italic:
-    family: Fura Code Nerd Font Mono
+    family: Fura Code Nerd Font
     style: Italic
 
   # Point size
@@ -99,7 +99,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 
 # If `true`, bold text is drawn using the bright color variants.
