@@ -85,7 +85,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-fpath=($HOME/.asdf/completions $fpath)
+FPATH=$HOME/.asdf/completions:$FPATH
 plugins=(
         asdf
 	git
@@ -98,6 +98,11 @@ plugins=(
 	docker-compose
 	)
 
+if type brew &>/dev/null; then
+	FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+	autoload -Uz compinit
+	rm -f ~/.zcompdump; compinit
+fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -107,12 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
-else
-   export EDITOR='mvim'
-fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -160,7 +159,6 @@ alias tf-core-dev="aws-okta exec dev-data-core-admin -- terraform"
 alias tf-core-qa="aws-okta exec qa-data-core-admin -- terraform"
 alias tf-core-prod="aws-okta exec prod-data-core-admin -- terraform"
 
-autoload -Uz compinit && compinit
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Kubernetes - Kubectl
@@ -169,3 +167,8 @@ source <(kubectl completion zsh)
 complete -F __start_kubectl k
 export KUBE_EDITOR="vi"
 
+# Helm
+source <(helm completion zsh)
+
+# github
+compctl -K _gh gh
