@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/pdumbre/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=13
 
 # Tmux
@@ -89,9 +89,6 @@ FPATH=$HOME/.asdf/completions:$FPATH
 plugins=(
         asdf
 	git
-	zsh-completions
-	zsh-syntax-highlighting
-	zsh-autosuggestions
 	tmux
 	fzf
 	docker
@@ -135,9 +132,6 @@ alias rmtf='rm -rf ./.terraform'
 eval "$(rbenv init -)"
 export PATH="${PATH}:${HOME}/.krew/bin"
 alias cp="rsync -avz"
-alias aws-qa='aws-okta exec qa-data-core-admin -- aws'
-alias aws-dev='aws-okta exec dev-data-core-admin -- aws'
-alias aws-prod='aws-okta exec prod-data-core-admin -- aws'
 alias cat='bat --style=plain'
 
 
@@ -154,21 +148,12 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# ShutterStock Settings
-alias tf-core-dev="aws-okta exec dev-data-core-admin -- terraform"
-alias tf-core-qa="aws-okta exec qa-data-core-admin -- terraform"
-alias tf-core-prod="aws-okta exec prod-data-core-admin -- terraform"
-
 HISTTIMEFORMAT="%d/%m/%y %T "
 
-# Kubernetes - Kubectl
-alias k=kubectl
-source <(kubectl completion zsh)
-complete -F __start_kubectl k
-export KUBE_EDITOR="vi"
-
-# Helm
-source <(helm completion zsh)
 
 # github
 compctl -K _gh gh
+
+# Go-lang
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$(go env GOPATH)/bin
