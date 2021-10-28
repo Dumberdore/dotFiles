@@ -157,3 +157,12 @@ compctl -K _gh gh
 # Go-lang
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/prakash/go/bin/gocomplete go
